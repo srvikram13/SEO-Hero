@@ -1,0 +1,533 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"new",
+				"newStudent"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"arr",
+				"arrStudents"
+			],
+			[
+				"first",
+				"firstName"
+			],
+			[
+				"do",
+				"doubleNo"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"many",
+				"many1"
+			],
+			[
+				"json",
+				"jsonElem"
+			],
+			[
+				"JNu",
+				"JNumber"
+			],
+			[
+				"Jnu",
+				"JNumber"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"sa",
+				"sans-serif"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"fizz",
+				"fizzbuzz"
+			],
+			[
+				"fi",
+				"fizzbuzz"
+			],
+			[
+				"cl",
+				"classObj"
+			],
+			[
+				"get",
+				"getClassById"
+			],
+			[
+				"class",
+				"classObj"
+			],
+			[
+				"clas",
+				"classObj"
+			],
+			[
+				"cla",
+				"classObj"
+			],
+			[
+				"re",
+				"responsibility"
+			],
+			[
+				"c",
+				"classObj"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"_",
+				"_id"
+			],
+			[
+				"target",
+				"targetId"
+			],
+			[
+				"sou",
+				"sourceId"
+			],
+			[
+				"fo",
+				"forEach"
+			],
+			[
+				"UML",
+				"UMLAssociation"
+			],
+			[
+				"getClass",
+				"getClassById"
+			],
+			[
+				"screen",
+				"screenX"
+			],
+			[
+				"onmou",
+				"onmousemove\tAttr"
+			],
+			[
+				"on",
+				"onchange\tAttr"
+			],
+			[
+				"sen",
+				"sendResponse"
+			],
+			[
+				"la",
+				"lavanyavikramdeshmukh"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "manifest.json",
+			"settings":
+			{
+				"buffer_size": 373,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero"
+	],
+	"file_history":
+	[
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab4/biblio.bib",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab4/essay.tex",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab9/intro.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab9/functional.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/monadLab.lhs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/monadLab-classroom-version.lhs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab8/csvParserImproved.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab8/test.csv",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab8/csvParser.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/bender.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/benderPerhaps.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/doit.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/stack.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab7/applyMaybe.hs",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Dell-Specialist, Graduate Intern.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Dell-UI.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ViaSat-SE(1).txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ViaSat-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Blend-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Thumbtack-Software Engg-New Grad.txt",
+		"/C/Users/vikram/Documents/playground/srvikram13/css/workexp.css",
+		"/C/Users/vikram/Documents/playground/srvikram13/index1.html",
+		"/C/Users/vikram/Documents/Coursework/CS297/migration1.nlogo",
+		"/C/Users/vikram/Downloads/migration1.nlogo",
+		"/C/Users/vikram/Documents/Application Material/QUESTIONS FOR INTERVIEWER.txt",
+		"/C/Users/vikram/Desktop/Solve This",
+		"/C/Users/vikram/Desktop/JavaScript.md",
+		"/C/Users/vikram/Desktop/CSS.md",
+		"/C/Users/vikram/Desktop/ToDo1",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-LeetCode.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Disney-SE.txt",
+		"/C/Users/vikram/Documents/Coursework/CS297/CS297",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Disney-Behind the Magic.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DisneyEmergingTech.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Autodesk-BigDataDev1.txt",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/CS185C-03 Solving Big Data Problems",
+		"/C/Users/vikram/Documents/Coursework/CS235/CS235 User Interface Design",
+		"/C/Users/vikram/Documents/Coursework/CS251B/CS251B Object Oriented Design",
+		"/C/Users/vikram/Documents/Coursework/CS251B/final/Driver.java",
+		"/C/Users/vikram/Desktop/PIPES1.0/src/gb/GarBageBand.java",
+		"/C/Users/vikram/Desktop/PIPES1.0/src/pipes/Pipeline.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/misc/test2.brickCAD",
+		"/C/Users/vikram/Desktop/Cheatsheet",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 5/PIPES1.0/src/pipes/Pipeline.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Memento.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Model.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/MVCApp.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/View.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/ViewFrame.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/AppFactory.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Command.java",
+		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/CommandProcessor.java",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/Project/ProcessData.java",
+		"/C/Users/vikram/Documents/playground/heroku/node-js-getting-started/Procfile",
+		"/C/Users/vikram/Documents/playground/node/main.js",
+		"/C/Users/vikram/Documents/playground/heroku/node-js-getting-started/package.json",
+		"/C/Users/vikram/Documents/Coursework/CS251B/IMP.txt",
+		"/C/Users/vikram/Documents/Coursework/CS251B/midterm.txt",
+		"/C/Users/vikram/Documents/playground/node/main1.js",
+		"/C/Users/vikram/Documents/playground/node/temp.json",
+		"/C/Users/vikram/Desktop/temp/ext/manifest.json",
+		"/C/Users/vikram/Desktop/temp/ext/src/page_action/page_action.html",
+		"/C/Users/vikram/Desktop/temp/ext/js/popup.js",
+		"/C/Users/vikram/Desktop/temp/ext/js/hello.js",
+		"/C/Users/vikram/Downloads/popup.html",
+		"/C/Users/vikram/Documents/playground/srvikram13/test.html",
+		"/C/Users/vikram/Documents/playground/node/test.mdj",
+		"/C/Users/vikram/Documents/playground/srvikram13/index.html",
+		"/C/Users/vikram/Downloads/2016 Stack Overflow Survey Results/2016 Stack Overflow Survey Results/READ_ME_-_The_Public_2016_Stack_Overflow_Developer_Survey_Results.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SAP-FE.txt",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/15_kafka_demo.txt",
+		"/C/Users/vikram/Documents/Coursework/CS251A/CS251A Object Oriented Analysis",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/SPARK_EXAMPLES/rebuild.sh",
+		"/C/Users/vikram/Documents/Model/Slideshow.java",
+		"/C/Users/vikram/Documents/Model/Photo.java",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/SPARK_EXAMPLES/run-wordcount.sh",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ZapLabs-iOS.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-VMWare-MobileAppsDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Philips-Design(Apps).txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Autodesk-DataVizEngg.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ZapLabs-AndroidEngg.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Autodesk-BigDataDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Doximity-DA.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Dolby-DA.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Intel-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Intel-CloudSE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Splunk-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SAP-EduCookbookDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Affirm-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Udacity-SDE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Apcera-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Moodys-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Paypal-FE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-PayScale-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Netgear-FE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Atlassian-FE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Yahoo-MobileDevEngg.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Artallus-MobileDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SAP-UIDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Invoca-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Thumbtack-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Proteus-MobileSE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-CreditKarma-SE.txt",
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/LAB1/pom.xml",
+		"/C/Users/vikram/Documents/playground/meetup/2017-03-04/readme.txt",
+		"/C/Users/vikram/Downloads/download (1)",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Playstation-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Wish-MobileEngg.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ShoreTel-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DropBox-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Yelp-SE.txt",
+		"/C/Users/vikram/Documents/playground/lavanyadeshmukh/index.html",
+		"/C/Users/vikram/Documents/playground/angular2/angular-quickstart/project.json",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-RedFin-SE.txt",
+		"/C/Users/vikram/Desktop/IMP",
+		"/C/Users/vikram/Documents/Application Material/prep material/InterviewQA.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DocuSign-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/prep material/Y2.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Graphiq-SE.txt",
+		"/C/Users/vikram/Desktop/output",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Ripple-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Yahoo-TechnicalInternII.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Ancestry-DNAMobileSE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Airbnb-SE-Seattle.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Chegg-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Logitech-SE.txt",
+		"/C/Users/vikram/Documents/Intern-Thumbtack-SE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-AutoDesk-SE.txt"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 177.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"label",
+			"goals",
+			"print",
+			"mydiv",
+			"font-fam",
+			"noto",
+			"font",
+			"include",
+			"mqh",
+			"mh",
+			"opt",
+			"% to",
+			"-­",
+			"midterm",
+			"review",
+			"spark",
+			"version",
+			"pCardinality",
+			"case",
+			"meta",
+			"alone",
+			"local",
+			"Cloud",
+			"info",
+			"icon",
+			"ehan",
+			"face",
+			"linkedin",
+			"implic",
+			"false",
+			".query",
+			"STEPS_TIMESTAMP",
+			"time",
+			"prototype",
+			"delegate",
+			",",
+			", ",
+			"\"",
+			"-",
+			"actor",
+			"mark",
+			"data",
+			"dinner",
+			"Whats For Dinner",
+			"dinner",
+			"Whats-For-Dinner",
+			"dinner",
+			"Whats For Dinner",
+			"dinner",
+			"Whats_For_Dinner",
+			"shah"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "manifest.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								373,
+								373
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 42.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SEO-here.sublime-project",
+	"replace":
+	{
+		"height": 78.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

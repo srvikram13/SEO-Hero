@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{url}
+\usepackage[margin=1in]{geometry}
+\title{Developing a Browser Extension for SEO Analysis and Report Generation}
+\author{
+  Vikram Deshmukh \\
+  San Jos\'{e} State University \\
+  Department of Computer Science \\
+  CS252 Project Proposal \\
+  Fall 2017
+  \bigskip
+  }
+
+\begin{document}
+\bigskip
+\maketitle
+\bigskip
+\bigskip
+\begin{abstract}
+Search Engine Optimization (SEO) has become an integral part of publishing any content on the web. The primary goal of SEO is to ensure higher visibility to the content. It is imperative to perform SEO on any web-related content that one wishes to make indexable for search engines. The main goal of this project is to build a browser extension that perform SEO analysis and displays a report within the browser without requiring the user to leave the page.
+\end{abstract}
+
+\smallskip
+
+\pagebreak
+\section{Introduction}
+SEO is an important step when it comes to authoring content for the web. There are many tools and small organizations that are dedicated to performing SEO analysis of existing sites and making suggestions to improve content visibility. There are also some existing extensions in the Chrome Web Store and Firefox Add-ons Gallery. But these are either marred by bad reviews due to functionalities issues or charge their users for premium access. The goal of this project is to provide an extension that perform SEO analysis and generates a report within the browser. While doing so, I will also attempt to understand the principal similarities and differences between the Chrome and Mozilla API. This will provide a better understanding of the effort involved in porting the extension built for one browser to another.
+
+
+\smallskip
+
+\section{Implementation}
+This project will provide an opportunity to learn the extensions API provided by major browsers today. It will also provide exposure to writing code that runs within the browser's sandbox. Additionally, there is also scope to apply a bunch of concepts that are part of the syllabus like Scoping in JavaScript and Event-based programming, in a real project.
+
+
+\smallskip
+
+\section{Schedule}
+Given below is a tentative schedule for completion of the project by first week of December.
+
+\begin{itemize}
+  \item {Week 1: Developing a sample extension for Chrome ~\cite{gExt} that sits in the toolbar, reads the HTML content on the page, and outputs something in a dialog.}
+  \item {Week 2: Learning SEO rules and guidelines ~\cite{seo} to come up with a rubric to score each page.}
+  \item {Week 3 \& 4: Implementing the scoring logic \& coming up with recommendations to increase SEO score.}
+  \item {Week 4: Exploring the Mozilla WebExtensions API ~\cite{fExt} to gauge feasibility of creating the same extension for Firefox.}
+  \item {Week 5: Comparative study of differences between the Chrome and Mozilla Extensions API and preparing project report.}
+  \item {Week 6: Project Presentation on December 4.}
+\end{itemize}
+
+\smallskip
+
+\bibliographystyle{plainurl}
+%\bibliographystyle{alpha}
+\bibliography{biblio}
+
+\end{document}
