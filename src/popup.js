@@ -47,7 +47,7 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
-/**
+  /**
  * Change the background color of the current page.
  *
  * @param {string} color The new background color.
@@ -105,6 +105,16 @@ function saveBackgroundColor(url, color) {
 // user devices.
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url) => {
+    console.log(url);
+    $.ajax({
+      url: url,
+      type: "GET",
+      dataType: "text",
+      error: (args) => { console.log("error:", args);}
+    }).done((data) => {
+      var sanitized = stripLinks(stripStyles(stripScripts(data)));
+      console.log("loaded", sanitized);
+    })
     var dropdown = document.getElementById('dropdown');
 
     // Load the saved background color for this page and modify the dropdown
@@ -124,3 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// StripScripts source: https://gist.github.com/sindresorhus/1993156
+var stripScripts = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('script');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
+var stripStyles = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('style');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
+var stripLinks = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('link');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
+//var s = function(a){return a.replace(/<script[^>]*>.*?<\/script>/gi,'')};
