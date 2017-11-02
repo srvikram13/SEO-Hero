@@ -16,29 +16,30 @@ A Chrome extension for SEO Analysis and report generation
 
 ### Error
 
-broken links
-missing closing tags
-missing H1 tag
-missing meta tags
+- broken links
+- missing closing tags
+- missing H1 tag
+- missing meta tags
 
 
 ### Warning
 
-Page Title too long
-Desc too long
+- Page Title too long
+- Desc too long
 
 ### Info
-Chrome on Android and Safari on iOS home screen icons
-Favicon
+- Chrome on Android and Safari on iOS home screen icons
+- Favicon
 
 
 
 ### Sort
-Image missing 'alt' attribute
+- Image missing 'alt' attribute
 
 ______________________
 
 ### Features
 
-[ ] Lambda syntax
-[ ] Scope and closures
+- Lambda syntax
+- Scope and closures
+- Santizer Class (using typeScript??)
