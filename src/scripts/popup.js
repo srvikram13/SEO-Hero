@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }).done((data) => {
       var sanitized = stripLinks(stripStyles(stripScripts(stripComments(data))));
       //console.log("loaded", sanitized);
-      $("#target").html("<h3>Parsed HTML</h3>"+sanitized);
+      $("#target").html("<h2>Parsed HTML</h2>"+sanitized);
     })
     var dropdown = document.getElementById('dropdown');
 

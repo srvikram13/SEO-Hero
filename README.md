@@ -26,6 +26,7 @@ A Chrome extension for SEO Analysis and report generation
 
 - Page Title too long
 - Desc too long
+- Elements with content (not just markup) are hidden
 
 ### Info
 - Chrome on Android and Safari on iOS home screen icons
