@@ -7,6 +7,7 @@ A Chrome extension for SEO Analysis and report generation
 - [x] Read the tab url
 - [x] Load the HTML as text.
 - [x] Sanitize HTML in popup.html
+	- [x] remove comments
 	- [x] remove script, style, link tags; 
 	- [ ] remove "onclick", href attributes starting with "javascript:"
 - [ ] Analysis this santized HTML and generate report.

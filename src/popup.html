@@ -9,7 +9,8 @@
     <title>Getting Started Extension's Popup</title>
     <style type="text/css">
       body {
-        margin: 10px;
+        margin: 0px;
+        padding: 0px;
         white-space: nowrap;
       }
 
@@ -21,6 +22,7 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
+        min-width: 800px;
       }
     </style>
 
@@ -35,6 +37,8 @@
   </head>
 
   <body>
+    <header class="mdl-layout__header is-casting-shadow">
+    </header>
     <h1>SEO Hero</h1>
     <div id="container">
       <span></span>
@@ -45,6 +49,7 @@
         <option value="green">Green</option>
         <option value="yellow">Yellow</option>
       </select>
+
     </div>
   </body>
 </html>

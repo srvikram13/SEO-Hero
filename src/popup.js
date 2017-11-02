@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dataType: "text",
       error: (args) => { console.log("error:", args);}
     }).done((data) => {
-      var sanitized = stripLinks(stripStyles(stripScripts(data)));
+      var sanitized = stripLinks(stripStyles(stripScripts(stripComments(data))));
       console.log("loaded", sanitized);
     })
     var dropdown = document.getElementById('dropdown');
@@ -140,3 +140,7 @@ var stripScripts = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElement
 var stripStyles = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('style');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
 var stripLinks = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('link');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
 //var s = function(a){return a.replace(/<script[^>]*>.*?<\/script>/gi,'')};
+var stripComments = function (str) {
+  if(str.indexOf("<!--") == -1) return str;
+  return stripComments(str.substring(0, str.indexOf("<!--")) + str.substring(str.indexOf("-->") + 3, str.length));
+}
