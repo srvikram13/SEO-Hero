@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+#container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-width: 800px;
+}
