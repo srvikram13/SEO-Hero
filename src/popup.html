@@ -6,7 +6,8 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>SEO Hero - Chrome Extension to perform SEO analysis</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/popup.css">
 
     <!--
@@ -16,12 +17,20 @@
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+
+    <script src="scripts/HTMLSanitizer.js"></script>
+    <script src="scripts/HTMLAnalyzer.js"></script>
     <script src="scripts/popup.js"></script>
   </head>
 
   <body>
     <header class="">
-      <h1>SEO Hero</h1>
+      <h1><div id='title'>Some page Title</div> <button id="btn-download" type="button"><i class="material-icons">assignment_returned</i></button></h1>
+      <div id='search-container'>
+        <input type="text" placholder='check another page'/><button type="button"><i class="material-icons">search</i></button>
+      </div>
       <select id="dropdown">
         <option selected disabled hidden value=''></option>
         <option value="white">White</option>
@@ -30,20 +39,75 @@
         <option value="yellow">Yellow</option>
       </select>
     </header>
-    <div id="container">
+    <div id='progressbar'></div>
+    <main>
       <div id='target'>
-        
+        <div id='scorebar'></div>
+        <section id='scoreboard'>
+          <div>Overall Score:</div>
+          <div id='score'>77</div>
+          <div id='btn-refresh'><button type="button"><i class="material-icons">cached</i></button></div>
+        </section>
+        <div id="page-details">
+          <div class='tbl-2-1'>
+            <label>Response Code</label>
+            <div id="response-code" class="value">200 OK</div>
+          </div>
+          <h3>Meta Tags</h3>
+          <div id="meta-container">
+            <details>
+              <summary>Title</summary>
+              <p id="page-title" class="value">Vikram Deshmukh | Front-end Developer (Web, Android, iOS) | San Jose, CA, USA | Mumbai, MH, India</p>  
+            </details>
+            <details>
+              <summary>Description</summary>
+              <p id="page-description" class="value">Front-end(UI/UX) Developer with over 9 years of industry experience. A gadget freak and an old school PC gamer who loves developing Web Apps and Data Visualizations.</p>
+            </details>
+            <details>
+              <summary>Keywords</summary>
+              <p id="page-keywords" class="value">Vikram Deshmukh, srvikram13, web developer, front-end developer, UI Engineer, Data Visualization, Android, iOS, Swift, HTML5, CSS3, jQuery, AngularJS, D3, Twitter Bootstrap</p>
+            </details> 
+            <details>
+              <summary>Author</summary>
+              <div id="page-author" class="value">Vikram Deshmukh</div>
+            </details>
+          </div>
+          <h3>Text Information</h3>
+          <div class='tbl-2-3'>
+            <label>Internal links</label>
+            <div class="value">12</div>
+            <label>External links</label>
+            <div class="value">1</div>
+            <label>no-follow links</label>
+            <div class="value">0</div>
+          </div>
+        </div>
       </div>
       <div id="checklist">
-        <h2>Checklist</h2>
-        <ul class="contains-task-list">
-          <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;title&gt; tag present</li>
-          <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;h1&gt; tag present</li>
-          <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;description&gt; meta tag present
-          <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No broken links</li>
-          <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No 'img' with missing 'alt' attribute </li>
-        </ul>
+        <div class="tbl-3-1">
+          <div class='btn-type active' data-tab="page-errors">
+            <i class="material-icons">highlight_off</i> Errors
+          </div>
+          <div class='btn-type' data-tab="page-warnings">
+            <i class="material-icons">error_outline</i> Warnings
+          </div>
+          <div class='btn-type' data-tab="page-info">
+            <i class="material-icons">info_outline</i> Info
+          </div>
+        </div>
+        
+        <div id="page-errors" class="tab active">
+          <ul class="contains-task-list">
+            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;title&gt; tag present</li>
+            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;h1&gt; tag present</li>
+            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;description&gt; meta tag present
+            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No broken links</li>
+            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No 'img' with missing 'alt' attribute </li>
+          </ul>
+        </div>
+        <div id="page-warnings" class="tab">Warnings section</div>
+        <div id="page-info" class="tab">Info section</div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

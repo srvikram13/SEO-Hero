@@ -103,19 +103,36 @@ function saveBackgroundColor(url, color) {
 // to a document's origin. Also, using chrome.storage.sync instead of
 // chrome.storage.local allows the extension data to be synced across multiple
 // user devices.
+var temp;
 document.addEventListener('DOMContentLoaded', () => {
+  $(".btn-type").click(function(){
+    $(".btn-type").removeClass("active");
+    $(this).addClass("active");
+    var tab = $(this).data("tab");  
+    $(".tab:not(#"+tab+")").fadeOut('fast', function(){
+      setTimeout(function(){$("#"+tab).fadeIn('fast');}, 300)
+    });
+  })
+  var tab = $(".btn-type.active").data("tab");  
+  $("#"+tab).fadeIn('fast');
+
+  $("details").click(function(){
+    if($(this).get(0).hasAttribute("open")) {
+
+    } else {
+      $("details").removeAttr("open");
+    }
+  });
+  $("#btn-download").click(function(){
+    var pdf = new jsPDF();
+    pdf.addHTML(document.body,function() {
+        pdf.save('SEOHero-report.pdf');
+    });  
+  })
   getCurrentTabUrl((url) => {
     console.log(url);
-    $.ajax({
-      url: url,
-      type: "GET",
-      dataType: "text",
-      error: (args) => { console.log("error:", args);}
-    }).done((data) => {
-      var sanitized = stripLinks(stripStyles(stripScripts(stripComments(data))));
-      //console.log("loaded", sanitized);
-      $("#target").html("<h2>Parsed HTML</h2>"+sanitized);
-    })
+    //return;
+    loadPage(url);
     var dropdown = document.getElementById('dropdown');
 
     // Load the saved background color for this page and modify the dropdown
@@ -136,12 +153,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// StripScripts source: https://gist.github.com/sindresorhus/1993156
-var stripScripts = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('script');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
-var stripStyles = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('style');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
-var stripLinks = function(a,b,c){b=new Option;b.innerHTML=a;for(a=b.getElementsByTagName('link');c=a[0];)c.parentNode.removeChild(c);return b.innerHTML}
-//var s = function(a){return a.replace(/<script[^>]*>.*?<\/script>/gi,'')};
-var stripComments = function (str) {
-  if(str.indexOf("<!--") == -1) return str;
-  return stripComments(str.substring(0, str.indexOf("<!--")) + str.substring(str.indexOf("-->") + 3, str.length));
+function loadPage(url) {
+  $("#progressbar").css("width", "0%");
+  $.ajax({
+    xhr: function() {
+      var xhr = new window.XMLHttpRequest();
+      xhr.addEventListener("progress", function(evt) {
+        var len = parseInt($("#progressbar").css("width"));
+        len += 10;
+        len = Math.max(len, 100);
+        $("#progressbar").css("width", len+"%");
+        if (evt.lengthComputable) {
+          var percentComplete = evt.loaded / evt.total;
+          console.log(percentComplete);
+        }
+      }, false);
+      return xhr;
+    },
+    url: url,
+    type: "GET",
+    dataType: "text",
+    error: (args) => { console.log("error:", args);},
+    complete: function(xhr, textStatus) {
+        $("#response-code").html(xhr.status);
+    } 
+  }).done((data) => {
+    var sanitized = Sanitizer.sanitize(data);
+    var report = HTMLAnalyzer.analyze(sanitized);
+
+    // update title, response code, and meta tags
+    // count links, their types and statuses
+
+  })
 }

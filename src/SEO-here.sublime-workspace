@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"stx",
+				"stx"
+			],
+			[
+				"typ",
+				"typecheckFail"
+			],
+			[
+				"ty",
+				"typecheckFail"
+			],
+			[
+				"typec",
+				"typecheckFail"
+			],
+			[
+				"ove",
+				"overflow-y"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"strip",
+				"stripComments"
+			],
+			[
+				"client",
+				"clientList"
+			],
+			[
+				"clie",
+				"clientList"
+			],
+			[
+				"sa",
+				"sanitized"
+			],
+			[
+				"st",
+				"stripStyles"
+			],
+			[
 				"pro",
 				"prototype"
 			],
@@ -50,10 +94,6 @@
 			[
 				"font-",
 				"font-weight"
-			],
-			[
-				"sa",
-				"sans-serif"
 			],
 			[
 				"inlin",
@@ -155,9 +195,55 @@
 			"file": "manifest.json",
 			"settings":
 			{
-				"buffer_size": 373,
+				"buffer_size": 476,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "popup.html",
+			"settings":
+			{
+				"buffer_size": 1910,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/temp.ts",
+			"settings":
+			{
+				"buffer_size": 290,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "namespace Sanitizer {"
+			}
+		},
+		{
+			"file": "styles/popup.css",
+			"settings":
+			{
+				"buffer_size": 604,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/popup.js",
+			"settings":
+			{
+				"buffer_size": 6381,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
+			"settings":
+			{
+				"buffer_size": 1023,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -168,12 +254,16 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 200.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 618.0
 	},
 	"console":
 	{
@@ -193,10 +283,36 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero"
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src"
 	],
 	"file_history":
 	[
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab13/stlc.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab13/out/myfile.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab13/myFile.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/JavaScript-Programming-Practice-1.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/JavaScript-Programming-Practice-2.js",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Salesforce-FEDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Software-Student-Asst.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Lyft-FE.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Insightly-FEDev.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Salesforce-PeopleAnalytics.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Palantir-SE (new grad).txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SumoLogic-WebUIEngg.txt",
+		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SAP-FE.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/popup.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/application.min.css",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/getmdl-select.min.css",
+		"/C/Users/vikram/Documents/Coursework/CS252/q8.hs",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab11/jsLint.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab11/rabbit.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab11/salary.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab11/sortAndGetLargest.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab11/ts.ts",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab12/chatServer.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Lab12/server.js",
+		"/C/Users/vikram/Downloads/q8.hs",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab4/biblio.bib",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab4/essay.tex",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab9/intro.js",
@@ -266,7 +382,6 @@
 		"/C/Users/vikram/Documents/playground/node/test.mdj",
 		"/C/Users/vikram/Documents/playground/srvikram13/index.html",
 		"/C/Users/vikram/Downloads/2016 Stack Overflow Survey Results/2016 Stack Overflow Survey Results/READ_ME_-_The_Public_2016_Stack_Overflow_Developer_Survey_Results.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-SAP-FE.txt",
 		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/15_kafka_demo.txt",
 		"/C/Users/vikram/Documents/Coursework/CS251A/CS251A Object Oriented Analysis",
 		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/SPARK_EXAMPLES/rebuild.sh",
@@ -300,39 +415,15 @@
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Thumbtack-SE.txt",
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Proteus-MobileSE.txt",
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-CreditKarma-SE.txt",
-		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/LAB1/pom.xml",
-		"/C/Users/vikram/Documents/playground/meetup/2017-03-04/readme.txt",
-		"/C/Users/vikram/Downloads/download (1)",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Playstation-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Wish-MobileEngg.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-ShoreTel-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DropBox-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Yelp-SE.txt",
-		"/C/Users/vikram/Documents/playground/lavanyadeshmukh/index.html",
-		"/C/Users/vikram/Documents/playground/angular2/angular-quickstart/project.json",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-RedFin-SE.txt",
-		"/C/Users/vikram/Desktop/IMP",
-		"/C/Users/vikram/Documents/Application Material/prep material/InterviewQA.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DocuSign-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/prep material/Y2.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Graphiq-SE.txt",
-		"/C/Users/vikram/Desktop/output",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Ripple-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Yahoo-TechnicalInternII.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Ancestry-DNAMobileSE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Airbnb-SE-Seattle.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Chegg-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Logitech-SE.txt",
-		"/C/Users/vikram/Documents/Intern-Thumbtack-SE.txt",
-		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-AutoDesk-SE.txt"
+		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/LAB1/pom.xml"
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 67.0
 	},
 	"find_in_files":
 	{
-		"height": 177.0,
+		"height": 252.0,
 		"where_history":
 		[
 			""
@@ -343,6 +434,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"evar",
+			"tin",
+			" class=\"task-list-item-checkbox\" ",
+			"class=\"expandee",
+			"override",
+			"<!--",
+			"write",
+			"script",
 			"label",
 			"goals",
 			"print",
@@ -411,7 +510,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -420,15 +519,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 373,
+						"buffer_size": 476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								373,
-								373
+								1,
+								1
 							]
 						],
 						"settings":
@@ -442,7 +541,155 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "popup.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 148.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts/temp.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"auto_name": "namespace Sanitizer {",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "styles/popup.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								360,
+								360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 477.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scripts/popup.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6230,
+								6230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -450,7 +697,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 42.0
+		"height": 49.0
 	},
 	"input":
 	{
@@ -479,6 +726,10 @@
 		]
 	},
 	"menu_visible": false,
+	"output.doc":
+	{
+		"height": 0.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -487,7 +738,7 @@
 	"project": "SEO-here.sublime-project",
 	"replace":
 	{
-		"height": 78.0
+		"height": 92.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -496,6 +747,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"popup",
+				"src\\scripts\\popup.js"
+			]
 		],
 		"width": 0.0
 	},
@@ -524,7 +779,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":

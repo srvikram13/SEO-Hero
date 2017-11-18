@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension allows the user to change the background color of the current page.",
+  "name": "SEO Hero: In page SEO Analysis",
+  "description": "This extension performs SEO of the loaded page and generates a report.",
   "version": "1.0",
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'",
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html",
-    "default_title": "Click here!"
+    "default_title": "Click to perform SEO Analysis of the current page."
   },
   "permissions": [
     "activeTab",
