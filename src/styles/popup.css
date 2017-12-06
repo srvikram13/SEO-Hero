@@ -4,7 +4,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   margin-left: 3px;
-  font-size: 13px;
+  font-size: 14px;
 }
 body, body * {
   box-sizing: border-box;
@@ -13,14 +13,22 @@ body, body * {
   font-weight: 400;
   outline:0;
 }
-.btn-type[data-tab="page-errors"], .btn-type[data-tab="page-errors"] i.material-icons {
-  color: rgb(255, 82, 82);
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #8c8b8b, #c2c2c2, #8c8b8b);
+  background-image: -moz-linear-gradient(left, #8c8b8b, #c2c2c2, #8c8b8b);
+  background-image: -ms-linear-gradient(left, #8c8b8b, #c2c2c2, #8c8b8b);
+  background-image: -o-linear-gradient(left, #8c8b8b, #c2c2c2, #8c8b8b);
 }
-.btn-type[data-tab="page-warnings"], .btn-type[data-tab="page-warnings"] i.material-icons {
-  color: rgb(255, 179, 71);
+.btn-type[data-tab="page-errors"], .btn-type[data-tab="page-errors"] i.material-icons, .error-text, .error-text * {
+  color: rgb(255, 82, 82) !important;
 }
-.btn-type[data-tab="page-info"], .btn-type[data-tab="page-info"] i.material-icons {
-  color: rgb(80, 150, 215);
+.btn-type[data-tab="page-warnings"], .btn-type[data-tab="page-warnings"] i.material-icons, .warning-text, .warning-text * {
+  color: rgb(255, 179, 71) !important;
+}
+.btn-type[data-tab="page-info"], .btn-type[data-tab="page-info"] i.material-icons, .info-text, .info-text * {
+  color: rgb(80, 150, 215) !important;
 }
 summary {
   cursor: pointer;
@@ -93,8 +101,9 @@ select#dropdown {
   overflow-y: auto;
   height: 500px;
   margin: 0px 15px 15px 0px;
-  background-color: rgba(33,33,33,0.5);
+  background-color: rgba(33,33,33,0.85);
 }
+#broken-links-count {color: inherit;}
 #target {
   width: calc(40% - 7px);
 }
@@ -126,11 +135,11 @@ select#dropdown {
   grid-column: 1;
   white-space: normal;
 }
-#scoreboard > div:nth-child(2) {
+#scoreboard > div:nth-child(2), #scoreboard > div:nth-child(2) > * {
   grid-column: 2;
   font-size: 88px;
   text-align: right;
-  padding: 10px;
+  padding: 5px;
   line-height: 1em;
 }
 #scoreboard > div:nth-child(3) {

@@ -11,7 +11,7 @@ A Chrome extension for SEO Analysis and report generation
 	- [x] remove script, style, link tags; 
 	- [ ] remove "onclick", href attributes starting with "javascript:"
 - [ ] Analysis this santized HTML and generate report.
-- [ ] Download as PDF
+- [x] Download as PDF
 
 
 ### Error
@@ -31,6 +31,7 @@ A Chrome extension for SEO Analysis and report generation
 - Page Title too long
 - Desc too long
 - Elements with content (not just markup) are hidden
+- Empty header tags
 
 ### Info
 - Chrome on Android and Safari on iOS home screen icons
@@ -59,4 +60,4 @@ ______________________
 
 - Lambda syntax
 - Scope and closures
-- Santizer Class (using typeScript??)
+- Santizer/Analyzer Singleton Classes (using TypeScript)

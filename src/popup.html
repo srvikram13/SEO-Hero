@@ -19,7 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
-
+    <script type="text/javascript" src="scripts/LinkChecker.js"></script>
     <script src="scripts/HTMLSanitizer.js"></script>
     <script src="scripts/HTMLAnalyzer.js"></script>
     <script src="scripts/popup.js"></script>
@@ -45,7 +45,7 @@
         <div id='scorebar'></div>
         <section id='scoreboard'>
           <div>Overall Score:</div>
-          <div id='score'>77</div>
+          <div id='score'><i class="material-icons">mood</i></div>
           <div id='btn-refresh'><button type="button"><i class="material-icons">cached</i></button></div>
         </section>
         <div id="page-details">
@@ -53,6 +53,7 @@
             <label>Response Code</label>
             <div id="response-code" class="value">200 OK</div>
           </div>
+          <hr/>
           <h3>Meta Tags</h3>
           <div id="meta-container">
             <details>
@@ -72,27 +73,29 @@
               <div id="page-author" class="value">Vikram Deshmukh</div>
             </details>
           </div>
-          <h3>Text Information</h3>
+          <hr/>
+          <h3>Hyperlinking Information</h3>
           <div class='tbl-2-3'>
             <label>Internal links</label>
-            <div class="value">12</div>
+            <div id='count-internal' class="value">12</div>
             <label>External links</label>
-            <div class="value">1</div>
+            <div id='count-external' class="value">1</div>
             <label>no-follow links</label>
-            <div class="value">0</div>
+            <div id='count-no-follow' class="value">18</div>
           </div>
+          <h3><span id="broken-links-count"></span> Broken links</h3>
         </div>
       </div>
       <div id="checklist">
         <div class="tbl-3-1">
           <div class='btn-type active' data-tab="page-errors">
-            <i class="material-icons">highlight_off</i> Errors
+            <i class="material-icons">error_outline</i> Critical
           </div>
           <div class='btn-type' data-tab="page-warnings">
-            <i class="material-icons">error_outline</i> Warnings
+            <i class="material-icons">warning</i> Important
           </div>
           <div class='btn-type' data-tab="page-info">
-            <i class="material-icons">info_outline</i> Info
+            <i class="material-icons">info_outline</i> Recommended
           </div>
         </div>
         

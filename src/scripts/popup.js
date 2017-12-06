@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadPage(url) {
   $("#progressbar").css("width", "0%");
+  let respCode;
   $.ajax({
     xhr: function() {
       var xhr = new window.XMLHttpRequest();
@@ -180,9 +181,94 @@ function loadPage(url) {
   }).done((data) => {
     var sanitized = Sanitizer.sanitize(data);
     var report = HTMLAnalyzer.analyze(sanitized);
+    
+    var link = document.createElement('a');
+    //  set href to any path
+    link.setAttribute('href', url);
+    var origin = link.origin;
+    report.links.forEach((elem) => {
+      if(elem.link.indexOf("chrome-extension") == 0) {
+        if(elem.link.indexOf("/popup.html") != -1) {
+          var temp = elem.link.split("popup.html");
+          temp[0] = origin;
+          elem.link = temp.join("");
+        } else {
+          var temp = elem.link.split("/");
+          temp.shift();
+          temp.shift();
+          temp[0] = origin;
+          elem.link = temp.join("/");
+        }
+      } 
+    })
+    console.log((report), origin);
+    if(!report.title || report.title == "undefined") {
+      $("#title").html("<span style='font-style:italic'>Title Missing</span>").attr("class", "error-text");
+      $("#meta-container").html('<details open>\
+                <summary>Title</summary>\
+                <p id="page-title" class="value error-text"><span style="font-style:italic">Title Missing</span></p>\
+              </details>')
+    } else {
+      $("#title").html(report.title).attr("class", "info-text");
 
-    // update title, response code, and meta tags
-    // count links, their types and statuses
+      $("#meta-container").html('<details open>\
+                <summary>Title</summary>\
+                <p id="page-title" class="value info-text">'+report.title+'</p>\
+              </details>')
+    }
+    for(var tag in report.meta) {
+      $("#meta-container").append('<details>\
+              <summary>'+tag+'</summary>\
+              <p id="page-'+tag+'" class="value">'+report.meta[tag]+'</p>\
+            </details>')
+    }
+    
+    let nofollow = report.links.reduce((total, elem) => { return elem["no-follow"] ? (total + 1) : total}, 0);
+    $("#count-no-follow").html(nofollow);
+    
+    let internal = report.links.reduce((total, elem) => { return elem.type == "internal" ? (total + 1) : total}, 0);
+    $("#count-internal").html(internal);
 
+    let external = report.links.reduce((total, elem) => { return elem.type == "external" ? (total + 1) : total}, 0);
+    $("#count-external").html(external);
+
+    var links = [];
+    report.links.forEach((link) => { 
+      if(link.link) {
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("test");
+        a.appendChild(linkText);
+        a.href = link.link;
+        links.push(a);
+      }
+    });
+    console.log(links);
+
+    var events = LinkChecker.events;
+    var processor = new LinkChecker.LinkProcessor(links, origin);
+
+    processor.on(events.started, startedEvent);
+    processor.on(events.checked, checkedEvent);
+    processor.on(events.completed, completedEvent);
+    
+    processor.go();
+
+    function startedEvent(total) {
+      console.log("started", total)
+    }
+    function checkedEvent(link) {
+      //console.log("checked", link)
+    }
+    function completedEvent() {
+      var broken = links.filter((elem) => { return elem.broken == false;}).length;
+      console.log(broken)
+      //console.log(links.filter((elem) => { return elem.broken == false;}).length, links.length);
+      $("#broken-links-count").html(broken);
+      if(broken > 0) {
+        $("#broken-links-count").parent().css("color", "rgb(255, 82, 82)");
+      } else {
+        $("#broken-links-count").parent().css("color", "rgb(96, 196, 150)");
+      }
+    }
   })
 }
