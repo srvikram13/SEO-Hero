@@ -4,17 +4,24 @@ var HTMLAnalyzer;
         var target = {};
         var temp = $.parseHTML(str);
         target.meta = {};
+
+        var tempDom = $('<output>').append($.parseHTML(str));
+        var h1Tags = $('h1', tempDom);
+
+        target.h1Count = h1Tags.length;
+
         temp.forEach(function (elem) {
             switch (elem.nodeName) {
                 case "META":
                     if (elem.hasAttribute("name") && elem.hasAttribute("content")) {
                         target.meta[elem.getAttribute("name").toLowerCase()] = elem.getAttribute("content");
                     }
-                    break;
+                    return;
                 case "TITLE":
                     target.title = elem.innerHTML;
-                    break;
+                    return;
                 default:
+
                     return;
             }
         });
@@ -43,8 +50,6 @@ var HTMLAnalyzer;
             }
         });
 
-        //  TODO: Check for missing opening or closing tag
-        //  TODO: Check for broken links
         return target; // an object containing evaluation result
     }
     HTMLAnalyzer.analyze = analyze;

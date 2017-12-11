@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });  
   })
   getCurrentTabUrl((url) => {
-    console.log(url);
+    //console.log(url);
     //return;
     loadPage(url);
     var dropdown = document.getElementById('dropdown');
@@ -166,7 +166,7 @@ function loadPage(url) {
         $("#progressbar").css("width", len+"%");
         if (evt.lengthComputable) {
           var percentComplete = evt.loaded / evt.total;
-          console.log(percentComplete);
+          //console.log(percentComplete);
         }
       }, false);
       return xhr;
@@ -201,7 +201,7 @@ function loadPage(url) {
         }
       } 
     })
-    console.log((report), origin);
+    /console.log((report), origin);
     if(!report.title || report.title == "undefined") {
       $("#title").html("<span style='font-style:italic'>Title Missing</span>").attr("class", "error-text");
       $("#meta-container").html('<details open>\
@@ -222,7 +222,43 @@ function loadPage(url) {
               <p id="page-'+tag+'" class="value">'+report.meta[tag]+'</p>\
             </details>')
     }
-    
+    /*
+      \item{Presence of exactly one \codeword{H1} tag}
+      \item{Missing meta tags like \codeword{description}, \codeword{keywords}, etc.}
+      \item{Presence of broken links}
+      \item{Page Redirect, if any, should be HTTP status 301 (Server-side redirect)}
+      \item{Missing closing tags}
+      \item{\codeword{img} tags with empty or missing \codeword{alt} attribute}
+      \item{Empty tags in the document}
+      \item{\codeword{description} or \codeword{title} too long/short}
+    */
+    var errors = [], warnings = [], recomm = [];
+    if(!report.title) {
+      errors.push("<code>title</code> tag is missing.");
+    } else if(report.title.length < 50 || report.title.length > 70) {
+      warnings.push("It is advisable to keep the <code>title</code> tag length between 50 and 70 characters.")
+    }
+    console.log(report)
+    if(report.h1Count < 1) {
+      errors.push("<code>H1</code> tag is missing.");
+    } else if(report.h1Count > 1) {
+      warnings.push("More than one <code>H1</code> tag is not encouraged.");
+    }
+    if(!report.meta.description) {
+      errors.push("<code>description</code> meta tag is missing");
+    } else if (report.meta.description.length < 70 || report.meta.description.length > 155) {
+      warnings.push("It is advisable to keep the <code>description</code> meta tag length between 70 and 155 characters.");
+    }
+
+    if(report.imagesWithoutAlt && report.imagesWithoutAlt.length) {
+      warnings.push("There are "+report.imagesWithoutAlt.length+" <code>img</code> elements without an <code>alt</code> attribute.")
+    }
+
+    if($("#response-code").html() != "200" && $("#response-code").html() != "301") {
+      if($("#response-code").html() == "302") {
+        errors.push("There exists a client-side redirect. Consider changing it to a server-side redirect.")
+      }
+    }
     let nofollow = report.links.reduce((total, elem) => { return elem["no-follow"] ? (total + 1) : total}, 0);
     $("#count-no-follow").html(nofollow);
     
@@ -242,7 +278,7 @@ function loadPage(url) {
         links.push(a);
       }
     });
-    console.log(links);
+    //console.log(links);
 
     var events = LinkChecker.events;
     var processor = new LinkChecker.LinkProcessor(links, origin);
@@ -254,21 +290,36 @@ function loadPage(url) {
     processor.go();
 
     function startedEvent(total) {
-      console.log("started", total)
+      //console.log("started", total)
     }
     function checkedEvent(link) {
       //console.log("checked", link)
     }
     function completedEvent() {
       var broken = links.filter((elem) => { return elem.broken == false;}).length;
-      console.log(broken)
+      //console.log(broken)
       //console.log(links.filter((elem) => { return elem.broken == false;}).length, links.length);
       $("#broken-links-count").html(broken);
       if(broken > 0) {
+        errors.push("There are "+broken+" broken links on page.");
         $("#broken-links-count").parent().css("color", "rgb(255, 82, 82)");
       } else {
         $("#broken-links-count").parent().css("color", "rgb(96, 196, 150)");
       }
+      render(errors, warnings, recomm);
     }
+  })
+}
+
+function render(errors, warnings, recomm) {
+  $("#page-errors").html("<ul></ul>");
+  errors.forEach((item) => {
+    $("#page-errors ul").append("<li class='report report-error'>"+item+"</li>");
+  })
+  warnings.forEach((item) => {
+    $("#page-errors ul").append("<li class='report report-warning'>"+item+"</li>");
+  })
+  recomm.forEach((item) => {
+    $("#page-errors ul").append("<li class='report report-recomm'>"+item+"</li>");
   })
 }

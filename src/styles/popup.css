@@ -108,7 +108,9 @@ select#dropdown {
   width: calc(40% - 7px);
 }
 #checklist li {
-  list-style: none;
+  list-style: lower-roman;
+  word-wrap: break-word;
+  white-space: normal;
 }
 #scorebar, #progressbar {
   height: 4px;
@@ -231,4 +233,23 @@ button i.material-icons {
 }
 code {
   font-family: Courier New;
+}
+#page-errors ul {
+  padding: 0px 40px;
+  font-size: 18px;
+}
+.report {
+  margin-bottom: 14px;
+}
+.report-error, .report-error * {
+  color: rgb(255, 82, 82) !important;
+}
+.report-warning, .report-warning * {
+  color: rgb(255, 179, 71) !important;
+}
+.report-recomm, .report-recomm * {
+  color: rgb(80, 150, 215) !important;
+}
+::-webkit-placeholder, ::placeholder {
+  color: grey;
 }
