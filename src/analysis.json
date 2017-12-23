@@ -1,0 +1,26 @@
+{
+	"meta": {
+		"google": "notranslate",
+		"robots": "index,follow",
+		"author": "Vikram Deshmukh",
+		"generator": "Sublime Text",
+		"description": "Front-end(UI/UX) Developer with over 9 years of industry experience. A gadget freak and an old school PC gamer who loves developing Web Apps and Data Visualizations.",
+		"keywords": "Vikram Deshmukh, srvikram13, web developer, front-end developer, UI Engineer, Data Visualization, Android, iOS, Swift, HTML5, CSS3, jQuery, AngularJS, D3, Twitter Bootstrap",
+		"viewport": "width=device-width"
+	},
+	"title": "Vikram Deshmukh | Front-end Developer (Web, Android, iOS) | San Jose, CA, USA | Mumbai, MH, India",
+	"links": [
+		{"HTTPstatus": 200, "type": "internal", "no-follow": false, "url":"/about/projects"},
+		{"HTTPstatus": 200, "type": "external", "no-follow": true, "url":"http://github.com/srvikram13"},
+		{"HTTPstatus": 301, "type": "internal", "no-follow": true, "url":"/Vikram-At-LinkedIn"},
+		{"HTTPstatus": null, "type": "other", "no-follow": false, "url":"mailto:srvikram13@gmail.com"},
+	],
+	"emptyHeadingTags": [],
+	"missingClosingTags": [],
+	"imagesWithoutAlt": [],
+	"h1Count": 1,
+	"h1First": true,
+	"androidIcon": true,
+	"appleIcon": true,
+	"favicon": true
+}

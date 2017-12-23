@@ -32,7 +32,6 @@ var HTMLAnalyzer;
         temp.forEach(function (elem, i) {
             switch (elem.nodeName) {
                 case "META":
-                    console.log(i , elem.nodeName, elem.getAttribute("name"))
                     if (elem.hasAttribute("name") && elem.hasAttribute("content")) {
                         target.meta[elem.getAttribute("name").toLowerCase()] = elem.getAttribute("content");
                     }

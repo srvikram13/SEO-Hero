@@ -171,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadPage(url) {
-  console.log(url);
   $("#progressbar").css("width", "0%");
   let respCode;
   $.ajax({
@@ -255,7 +254,7 @@ function loadPage(url) {
     } else if(report.title.length < 50 || report.title.length > 70) {
       warnings.push("It is advisable to keep the <code>title</code> tag length between 50 and 70 characters.")
     }
-    console.log(report)
+    //console.log(report)
     if(report.h1Count < 1) {
       errors.push("<code>H1</code> tag is missing.");
     } else if(report.h1Count > 1) {
