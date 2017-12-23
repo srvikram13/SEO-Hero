@@ -129,8 +129,25 @@ document.addEventListener('DOMContentLoaded', () => {
         pdf.save('SEOHero-report.pdf');
     });  
   })
+
+  $("#btn-refresh").click(function(){
+    loadPage(currentTabUrl);
+  })
+  $("#btn-search").click(function(){
+    var newUrl = $.trim($("#search-container input").val()).replace("http://", "").replace("https://", "");
+    if(newUrl.length > 5) {
+      newUrl = $.trim($("#search-container input").val());
+      if(newUrl.indexOf("http://") == -1) newUrl = "http://"+newUrl;
+      loadPage(newUrl);
+    } else {
+      alert("Enter valid URL.");
+      $("#search-container input").val('')
+    }
+  })
+  var currentTabUrl = '';
   getCurrentTabUrl((url) => {
     //console.log(url);
+    currentTabUrl = url;
     //return;
     loadPage(url);
     var dropdown = document.getElementById('dropdown');
@@ -154,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadPage(url) {
+  console.log(url);
   $("#progressbar").css("width", "0%");
   let respCode;
   $.ajax({
@@ -181,7 +199,6 @@ function loadPage(url) {
   }).done((data) => {
     var sanitized = Sanitizer.sanitize(data);
     var report = HTMLAnalyzer.analyze(sanitized);
-    
     var link = document.createElement('a');
     //  set href to any path
     link.setAttribute('href', url);
@@ -201,7 +218,7 @@ function loadPage(url) {
         }
       } 
     })
-    /console.log((report), origin);
+    
     if(!report.title || report.title == "undefined") {
       $("#title").html("<span style='font-style:italic'>Title Missing</span>").attr("class", "error-text");
       $("#meta-container").html('<details open>\
@@ -259,6 +276,20 @@ function loadPage(url) {
         errors.push("There exists a client-side redirect. Consider changing it to a server-side redirect.")
       }
     }
+
+    if(!report.h1First) {
+      warnings.push("Semantically, <code>H1</code> should appear before other heading tags.");
+    }
+
+    report.emptyHeadingTags.forEach((elem,index) => {
+      if(elem.element.length > 0)
+        errors.push("Found "+elem.element.length+" empty <code>"+elem.tag+"</code> tags. Empty heading tags are discouraged.");  
+    });
+    
+    if(report.outOfOrder) {
+      recomm.push("<code>title</code>, <code>description</code>, and <code>keywords</code> meta tags should appear in that order.")
+    }
+
     let nofollow = report.links.reduce((total, elem) => { return elem["no-follow"] ? (total + 1) : total}, 0);
     $("#count-no-follow").html(nofollow);
     
@@ -279,6 +310,7 @@ function loadPage(url) {
       }
     });
     //console.log(links);
+    render(errors, warnings, recomm);
 
     var events = LinkChecker.events;
     var processor = new LinkChecker.LinkProcessor(links, origin);
@@ -288,6 +320,8 @@ function loadPage(url) {
     processor.on(events.completed, completedEvent);
     
     processor.go();
+
+
 
     function startedEvent(total) {
       //console.log("started", total)
@@ -313,6 +347,9 @@ function loadPage(url) {
 
 function render(errors, warnings, recomm) {
   $("#page-errors").html("<ul></ul>");
+  $("#error-count").html(errors.length);
+  $("#warning-count").html(warnings.length);
+  $("#recomm-count").html(recomm.length);
   errors.forEach((item) => {
     $("#page-errors ul").append("<li class='report report-error'>"+item+"</li>");
   })
@@ -322,4 +359,15 @@ function render(errors, warnings, recomm) {
   recomm.forEach((item) => {
     $("#page-errors ul").append("<li class='report report-recomm'>"+item+"</li>");
   })
+  if(errors.length > 3) {
+    $("#score i").html("sentiment_very_dissatisfied");
+  } else if(errors.length > 0 && errors.length <= 2 && warnings.length > 0) {
+    $("#score i").html("sentiment_dissatisfied");
+  } else if(errors.length == 0 && warnings.length > 2) {
+    $("#score i").html("sentiment_neutral");
+  } else if(errors.length == 0 && warnings.length <= 2 && recomm.length >= 0) {
+    $("#score i").html("sentiment_satisfied");
+  } else if(errors.length == 0 && warnings.length == 0 && recomm.length == 0) {
+    $("#score i").html("sentiment_very_satisfied");
+  }
 }

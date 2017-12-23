@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
+				"HTMLI",
+				"HTMLImageElement\tinterface"
+			],
+			[
+				"HTML",
+				"HTMLAnchorElement\tinterface"
+			],
+			[
+				"app",
+				"appContainer"
+			],
+			[
+				"node",
+				"nodeName"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"error",
+				"errors"
+			],
+			[
+				"e",
+				"enum\tEnumerate"
+			],
+			[
+				"fn",
+				"font-family"
+			],
+			[
 				"item",
 				"itemize"
 			],
 			[
 				"im",
 				"important"
-			],
-			[
-				"error",
-				"error-text"
 			],
 			[
 				"bro",
@@ -44,10 +76,6 @@
 				"each_node"
 			],
 			[
-				"node",
-				"nodeList"
-			],
-			[
 				"get",
 				"getAttribute"
 			],
@@ -62,10 +90,6 @@
 			[
 				"c",
 				"cursor"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"page-",
@@ -118,10 +142,6 @@
 			[
 				"sc",
 				"scriptFree"
-			],
-			[
-				"e",
-				"elem"
 			],
 			[
 				"o",
@@ -316,147 +336,10 @@
 	"buffers":
 	[
 		{
-			"file": "manifest.json",
 			"settings":
 			{
-				"buffer_size": 539,
-				"encoding": "UTF-8",
+				"buffer_size": 0,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/HTMLAnalyzer.ts",
-			"settings":
-			{
-				"buffer_size": 1170,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/HTMLAnalyzer.js",
-			"settings":
-			{
-				"buffer_size": 2325,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/HTMLSanitizer.js",
-			"settings":
-			{
-				"buffer_size": 1612,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scripts/HTMLSanitizer.ts",
-			"settings":
-			{
-				"buffer_size": 1346,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "popup.html",
-			"settings":
-			{
-				"buffer_size": 5458,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scripts/popup.js",
-			"settings":
-			{
-				"buffer_size": 9579,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "styles/popup.css",
-			"settings":
-			{
-				"buffer_size": 4672,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "analysis.json",
-			"settings":
-			{
-				"buffer_size": 1097,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "{"
-			}
-		},
-		{
-			"contents": "(function() {\n    var jQueryUrl = \"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js\",\n        linkCheckerUrl = \"//raw.github.com/WickyNilliams/LinkChecker/master/src/LinkChecker.js\",\n        linkCheckerUiUrl = \"//raw.github.com/WickyNilliams/LinkChecker/master/src/LinkChecker.UI.js\";\n\n    function loadScript(url, callback) {\n\n        var head = document.getElementsByTagName(\"head\")[0];\n        var script = document.createElement(\"script\");\n        script.src = url;\n\n        script.onload = script.onreadystatechange = function() {\n            var loaded = this.readyState === \"loaded\",\n                completed = this.readyState === \"complete\";\n\n            if(!this.readyState || loaded || completed) {\n\n                callback && callback();\n\n                script.onload = script.onreadystatechange = null;\n                head.removeChild( script );\n            }\n        };\n\n        head.appendChild(script);\n    }\n\n    loadScript(jQueryUrl, function() {\n        loadScript(linkCheckerUrl, function() {\n            loadScript(linkCheckerUiUrl);\n        });\n    });\n\n}());",
-			"settings":
-			{
-				"buffer_size": 1090,
-				"line_ending": "Windows",
-				"name": "(function() {"
-			}
-		},
-		{
-			"contents": "HWX\nFor 2 points extra credit, extend the compiler and VM from Lab 18.\n\n**There is not partial credit -- all parts must be implemented correctly**\n\nScheme and bytecode examples are available at http://www.cs.sjsu.edu/~austin/cs252-fall17/hw/hwX/.\n\nAdd the following operators to the VM:\n*JMP <label>      -- unconditional jump to the specified label.\n*JZ <label>       -- pop the top value on the stack.  If it is zero, jump to the specified label.\n*JNZ <label>      -- pop the top value on the stack.  If it is **not** zero, jump to the specified label.\n*STOR <register>  -- pop the top value on the stack, and store it in the given register.\n*LOAD <register>  -- get the value from the given register and push it on to the stack.\n\nIn order to support these features, you will need to introduce support for labels and registers into your implementation.\n\nLabels are alphanumeric and end with a colon.  For the purpose of this assignment, you may assume that they are on a line by themselves.\n\nRegisters will be represented by positive integers.  (You might wish to store them in a hashmap).  There is no limit on the number of registers that you may use, in contrast to real machine architectures.\n\n\nWith these features, you can build more complex structures in your Scheme compiler.  Add support for boolean values, if expressions, and let expressions.\n\nSome sample expressions are given below.  Note that ';' comments out the rest of the line in Scheme.\n\n(if #t (println 1) (println 2))       ; prints 1\n(if #f (println 1) (println 2))       ; prints 2\n(let ([x 4]) (println x))             ; prints 4\n(let ([x 4][y 2]) (println (+ x y)))  ; prints 6\n\nOnce you have it working, show me a demo.  You must present it to me before the last day of class in order to get credit.",
-			"settings":
-			{
-				"buffer_size": 1776,
-				"line_ending": "Windows",
-				"name": "HWX"
-			}
-		},
-		{
-			"file": "/C/Users/vikram/Documents/playground/srvikram13/index.html",
-			"settings":
-			{
-				"buffer_size": 40903,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
-			"settings":
-			{
-				"buffer_size": 2016,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/biblio.bib",
-			"settings":
-			{
-				"buffer_size": 725,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/report.tex",
-			"settings":
-			{
-				"buffer_size": 5807,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nLaTeXTools\n----------\n\n  LaTeXTools Plugin version 3.14.1 (2017-06-01)\n  \n  Thank you for installing the LaTeXTools plugin!\n  \n  To learn about the features of this plugin, go to the Github page:\n  \n  https://github.com/SublimeText/LaTeXTools\n  \n  and scroll down to the README file. Actually, the Markdown source of that file is in the plugin directory, which you can open using \"Browse Packages...\" in Sublime Text.\n  \n  You can also check out Marciano's blog at\n  \n  tekonomist.wordpress.com\n  \n  Happy TeXing!\n  Ian Bacher, Marciano Siniscalchi, and Richard Stein\n",
-			"settings":
-			{
-				"buffer_size": 619,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
@@ -577,13 +460,51 @@
 	],
 	"file_history":
 	[
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/jmp.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/if.scm",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/if.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/twoif.scm",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/twoif.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/test.scm",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/print.scm",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/let.scm",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/let.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/compiler.rb",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/vm.rb",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/Instructions.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/stor_load.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/HWX/test.byco",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/alicePriv.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/bobPriv.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/bobPub.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/charliePriv.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/charliePub.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/coinUI.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/cryptoCurr.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/testBadSig.output.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/testBadSig.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/tester.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/tester.output.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/alicePub.txt",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/analysis.json",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/popup.css",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/popup.html",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/popup.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.ts",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/biblio.bib",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/manifest.json",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.ts",
+		"/C/Users/vikram/Documents/playground/srvikram13/index.html",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/report.tex",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/proposal.tex",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/biblio.bib",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW3/WhileInterp.hs",
 		"/C/Users/vikram/Documents/Coursework/CS252/Presentation-Summaries-1.txt",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/LinkChecker.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Presentation-Summaries-2.txt",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/popup.css",
 		"/C/Users/vikram/Documents/playground/srvikram13/LinkChecker.UI.js",
 		"/C/Users/vikram/Documents/playground/srvikram13/LinkChecker.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab18/print.scm",
@@ -601,9 +522,7 @@
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab17/conversion.rb",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab17/method-missing.rb",
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Lenovo-FSSD.txt",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.ts",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab15/proxy.js",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/temp.ts",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab13/myFile.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Lab14/stlc.hs",
@@ -668,47 +587,11 @@
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Autodesk-BigDataDev1.txt",
 		"/C/Users/vikram/Documents/Coursework/CS185C-03/CS185C-03 Solving Big Data Problems",
 		"/C/Users/vikram/Documents/Coursework/CS235/CS235 User Interface Design",
-		"/C/Users/vikram/Documents/Coursework/CS251B/CS251B Object Oriented Design",
-		"/C/Users/vikram/Documents/Coursework/CS251B/final/Driver.java",
-		"/C/Users/vikram/Desktop/PIPES1.0/src/gb/GarBageBand.java",
-		"/C/Users/vikram/Desktop/PIPES1.0/src/pipes/Pipeline.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/misc/test2.brickCAD",
-		"/C/Users/vikram/Desktop/Cheatsheet",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 5/PIPES1.0/src/pipes/Pipeline.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Memento.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Model.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/MVCApp.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/View.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/ViewFrame.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/AppFactory.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/Command.java",
-		"/C/Users/vikram/Documents/Coursework/CS251B/Assignment 6/src/mvc/CommandProcessor.java",
-		"/C/Users/vikram/Documents/Coursework/CS185C-03/Project/ProcessData.java",
-		"/C/Users/vikram/Documents/playground/heroku/node-js-getting-started/Procfile",
-		"/C/Users/vikram/Documents/playground/node/main.js",
-		"/C/Users/vikram/Documents/playground/heroku/node-js-getting-started/package.json",
-		"/C/Users/vikram/Documents/Coursework/CS251B/IMP.txt",
-		"/C/Users/vikram/Documents/Coursework/CS251B/midterm.txt",
-		"/C/Users/vikram/Documents/playground/node/main1.js",
-		"/C/Users/vikram/Documents/playground/node/temp.json",
-		"/C/Users/vikram/Desktop/temp/ext/manifest.json",
-		"/C/Users/vikram/Desktop/temp/ext/src/page_action/page_action.html",
-		"/C/Users/vikram/Desktop/temp/ext/js/popup.js",
-		"/C/Users/vikram/Desktop/temp/ext/js/hello.js",
-		"/C/Users/vikram/Downloads/popup.html",
-		"/C/Users/vikram/Documents/playground/srvikram13/test.html",
-		"/C/Users/vikram/Documents/playground/node/test.mdj",
-		"/C/Users/vikram/Documents/playground/srvikram13/index.html",
-		"/C/Users/vikram/Downloads/2016 Stack Overflow Survey Results/2016 Stack Overflow Survey Results/READ_ME_-_The_Public_2016_Stack_Overflow_Developer_Survey_Results.txt",
-		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/15_kafka_demo.txt",
-		"/C/Users/vikram/Documents/Coursework/CS251A/CS251A Object Oriented Analysis",
-		"/C/Users/vikram/Documents/Coursework/CS185C-03/labs/SPARK_EXAMPLES/rebuild.sh",
-		"/C/Users/vikram/Documents/Model/Slideshow.java",
-		"/C/Users/vikram/Documents/Model/Photo.java"
+		"/C/Users/vikram/Documents/Coursework/CS251B/CS251B Object Oriented Design"
 	],
 	"find":
 	{
-		"height": 48.0
+		"height": 67.0
 	},
 	"find_in_files":
 	{
@@ -723,6 +606,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"extractLinks",
+			"console.log",
+			"$(\"#page-errors\").append",
+			"cite",
+			"fext",
+			"publishing",
+			"cite",
+			"bib",
+			"ref",
+			"cite",
+			"\\",
 			"=>",
 			"f0f0f0",
 			"#f0f0f0, #8c8b8b, #f0f0f0);",
@@ -817,410 +711,15 @@
 	"groups":
 	[
 		{
-			"selected": 14,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "manifest.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 539,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								404,
-								404
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "scripts/HTMLAnalyzer.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1170,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								571,
-								571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 13511.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "scripts/HTMLAnalyzer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1529,
-								1529
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 580.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "scripts/HTMLSanitizer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1612,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								444,
-								444
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 820.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "scripts/HTMLSanitizer.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "popup.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2036,
-								2036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1328.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "scripts/popup.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7279,
-								7279
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 2,
-								"tabSize": 2
-							}
-						},
-						"translation.x": 135.0,
-						"translation.y": 7216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "styles/popup.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4672,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1023,
-								1023
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 248.0,
-						"translation.y": 429.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "analysis.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1097,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1069,
-								1069
-							]
-						],
-						"settings":
-						{
-							"auto_name": "{",
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1090,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								757,
-								757
-							]
-						],
-						"settings":
-						{
-							"auto_name": "(function() {",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1776,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								702,
-								702
-							]
-						],
-						"settings":
-						{
-							"auto_name": "HWX",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/C/Users/vikram/Documents/playground/srvikram13/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 40903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5561,
-								5561
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3467.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2016,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								389,
-								389
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 287.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/biblio.bib",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 725,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -1233,73 +732,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/Bibtex.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/report.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3257,
-								3257
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4316.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 619,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								293,
-								252
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 354.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1365,6 +804,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"htmla",
+				"src\\scripts\\HTMLAnalyzer.ts"
+			],
 			[
 				"pop",
 				"src\\styles\\popup.css"

@@ -29,10 +29,10 @@
     <header class="">
       <h1><div id='title'>Some page Title</div> <button id="btn-download" type="button"><i class="material-icons">assignment_returned</i></button></h1>
       <div id='search-container'>
-        <input type="text" placholder='check another page'/><button type="button"><i class="material-icons">search</i></button>
+        <input type="text" placeholder='check another page'/><button type="button" id="btn-search"><i class="material-icons">search</i></button>
       </div>
       <select id="dropdown">
-        <option selected disabled hidden value=''></option>
+        <option selected disabled hidden value=''>&nbsp;</option>
         <option value="white">White</option>
         <option value="pink">Pink</option>
         <option value="green">Green</option>
@@ -45,15 +45,48 @@
         <div id='scorebar'></div>
         <section id='scoreboard'>
           <div>Overall Score:</div>
-          <div id='score'><i class="material-icons">mood</i></div>
+          <div id='score'><i class="material-icons"></i></div>
           <div id='btn-refresh'><button type="button"><i class="material-icons">cached</i></button></div>
+          <div class="tbl-3-1" id="gamification-tag">
+            <span class="gamify-tag report-error" title="Errors">
+              <i class="material-icons">error</i>
+              <span id='error-count'>-</span>
+            </span>
+            <span class="gamify-tag report-warning" title="Warnings">
+              <i class="material-icons">warning</i>
+              <span id='warning-count'>-</span>
+            </span>            
+            <span class="gamify-tag report-recomm" title="Recommendations">
+              <i class="material-icons">add_alert</i>
+              <span id='recomm-count'>-</span>
+            </span>
+          </div>
         </section>
-        <div id="page-details">
+        
+      </div>
+      <div id="checklist">
+        <div id="page-errors" class="active">
+        </div>
+      </div>
+      <div id="page-details">
+        <div id="link-info">
+          <h3>Hyperlinking Information</h3>
+          <div class='tbl-2-3'>
+            <label>Internal links</label>
+            <div id='count-internal' class="value">12</div>
+            <label>External links</label>
+            <div id='count-external' class="value">1</div>
+            <label>no-follow links</label>
+            <div id='count-no-follow' class="value">18</div>
+          </div>
+          <h3 id='broken-link-count-holder'><span id="broken-links-count"><img src='images/loading.gif' alt='Loading' /></span> Broken links <sup><i>beta</i></sup></h3>
+          <hr/>
           <div class='tbl-2-1'>
             <label>Response Code</label>
             <div id="response-code" class="value">200 OK</div>
           </div>
-          <hr/>
+        </div>
+        <div id="meta-info">
           <h3>Meta Tags</h3>
           <div id="meta-container">
             <details>
@@ -73,47 +106,9 @@
               <div id="page-author" class="value">Vikram Deshmukh</div>
             </details>
           </div>
-          <hr/>
-          <h3>Hyperlinking Information</h3>
-          <div class='tbl-2-3'>
-            <label>Internal links</label>
-            <div id='count-internal' class="value">12</div>
-            <label>External links</label>
-            <div id='count-external' class="value">1</div>
-            <label>no-follow links</label>
-            <div id='count-no-follow' class="value">18</div>
-          </div>
-          <h3><span id="broken-links-count"></span> Broken links</h3>
         </div>
-      </div>
-      <div id="checklist">
-        <!-- <div class="tbl-3-1">
-          <div class='btn-type active' data-tab="page-errors">
-            <i class="material-icons">error_outline</i> Critical
-          </div>
-          <div class='btn-type' data-tab="page-warnings">
-            <i class="material-icons">warning</i> Important
-          </div>
-          <div class='btn-type' data-tab="page-info">
-            <i class="material-icons">info_outline</i> Recommended
-          </div>
-        </div> 
-        
-        <div id="page-errors" class="tab active">
-          <ul class="contains-task-list">
-            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;title&gt; tag present</li>
-            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;h1&gt; tag present</li>
-            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> &lt;description&gt; meta tag present
-            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No broken links</li>
-            <li class="task-list-item"><input checked="" disabled="" id="" type="checkbox"> No 'img' with missing 'alt' attribute </li>
-          </ul>
-        </div>
-        <div id="page-warnings" class="tab">Warnings section</div>
-        <div id="page-info" class="tab">Info section</div>-->
-        <div id="page-errors" class="active">
-        </div>
-
       </div>
     </main>
+    <footer>Learn more about SEO from <a href="https://d2eeipcrcdle6.cloudfront.net/seo-cheat-sheet.pdf" target="_blank">Moz SEO cheat sheet</a> and <a href="https://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf" target="_blank">Google SEO Starter Guide</a>.</footer>
   </body>
 </html>

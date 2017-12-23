@@ -4,7 +4,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   margin-left: 3px;
-  font-size: 14px;
+  font-size: 16px;
 }
 body, body * {
   box-sizing: border-box;
@@ -43,6 +43,7 @@ h1 {
 }
 #title {
   max-width: 400px;
+  max-width: 710px; /* As long as the search bar is not available */
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -93,17 +94,52 @@ select#dropdown {
 #target {
   min-height: 120px;
 }
-#checklist, #target {
+#checklist, #target, #page-details {
   vertical-align: top;
   display: inline-block;
-  width: calc(60% - 7px);
   overflow-x: hidden;
   overflow-y: auto;
-  height: 500px;
+  width: calc(60% - 12px);
+  height: 220px;
   margin: 0px 15px 15px 0px;
   background-color: rgba(33,33,33,0.85);
 }
-#broken-links-count {color: inherit;}
+#page-details {
+  width: 100%;
+  display: block;
+  height: calc(100% - 220px);
+  padding: 10px 20px;
+  overflow: hidden;
+}
+#link-info, #meta-info {
+  display: inline-block;
+  width: calc(60% - 0px);
+  height: 240px;
+  vertical-align: top;
+}
+#link-info {
+  width: calc(40% - 28px);
+  margin-right: 20px;
+}
+#meta-info > h3, #link-info > h3 {
+  margin-top: 0px;
+}
+h3#broken-link-count-holder {
+  padding-left: 30px;
+}
+#meta-info {
+  padding-left: 20px; 
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#broken-links-count {
+  color: inherit;
+  margin-left: -30px;
+}
+#broken-links-count img {
+  width: 30px;
+  margin-bottom: -10px;
+}
 #target {
   width: calc(40% - 7px);
 }
@@ -149,10 +185,7 @@ select#dropdown {
   padding-left: 0px;
   padding-right: 30px;
 }
-#page-details {
-  padding: 10px 20px;
-}
-#page-details > *:not([class^='tbl-2-']) {
+#link-info > *:not([class^='tbl-2-']) {
   display: block;
   width: 100%;
   margin-bottom: 14px;
@@ -236,7 +269,7 @@ code {
 }
 #page-errors ul {
   padding: 0px 40px;
-  font-size: 18px;
+  /*font-size: 18px;*/
 }
 .report {
   margin-bottom: 14px;
@@ -252,4 +285,24 @@ code {
 }
 ::-webkit-placeholder, ::placeholder {
   color: grey;
+}
+
+#gamification-tag {
+  grid-column: 1 / span 3;
+  padding: 30px 30px 0px 50px !important;
+}
+footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: -30px;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(80, 150, 215);
+}
+footer a:hover {
+  color: rgb(100, 170, 235);
+}
+#search-container {
+  display: none; /* Will enable this in a later version */
 }
