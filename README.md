@@ -1,8 +1,8 @@
 # SEO-Hero
-A Chrome extension for SEO Analysis and report generation
+A Chrome extension for in-page SEO analysis and report generation
 
 
-### To-do
+## To-do
 
 - [x] Read the tab url
 - [x] Load the HTML as text.
@@ -14,11 +14,12 @@ A Chrome extension for SEO Analysis and report generation
 - [x] Download as PDF
 
 
-### Error
+## The Rubric for evaluation
+Given below are a list of parameters that the page markup is evaluated on and their classification as errors, warnings, and non-critical recommendations.
 
+### Error
 - [ ] broken links
-	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links)
-		- [ ] [More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream)
+	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links) [More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream)
 	- [ ] [LinkChecker](https://github.com/WickyNilliams/LinkChecker)
 - [ ] missing closing tags
 - [x] missing H1 tag
