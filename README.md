@@ -19,7 +19,7 @@ Given below are a list of parameters that the page markup is evaluated on and th
 
 * ### Error
 - [ ] broken links
-	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links) [More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream)
+	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links) ([More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream))
 	- [ ] [LinkChecker](https://github.com/WickyNilliams/LinkChecker)
 - [ ] missing closing tags
 - [x] missing H1 tag
@@ -47,7 +47,7 @@ Given below are a list of parameters that the page markup is evaluated on and th
 
 ______________________
 
-### Features
+## Features
 
 - Lambda syntax
 - Scope and closures
