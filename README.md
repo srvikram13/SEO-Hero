@@ -17,9 +17,9 @@ A Chrome extension for in-page SEO analysis and report generation
 ## The Rubric for evaluation
 Given below are a list of parameters that the page markup is evaluated on and their classification as errors, warnings, and non-critical recommendations.
 
-### Error
+* ### Error
 - [ ] broken links
-	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links) [More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream)
+	- [ ] [Check-My-Links](https://github.com/ocodia/Check-My-Links) ([More Info](https://moz.com/blog/check-my-links-chrome-extension-a-link-builders-dream))
 	- [ ] [LinkChecker](https://github.com/WickyNilliams/LinkChecker)
 - [ ] missing closing tags
 - [x] missing H1 tag
@@ -28,7 +28,7 @@ Given below are a list of parameters that the page markup is evaluated on and th
 - [x] Empty header tags
 
 
-### Warning
+* ### Warning
 - [x] Page Title too long
 	- Limit the page title to 60-65 characters and ensure it begins with a relevant keyword.
 - [x] Desc too long
@@ -36,7 +36,7 @@ Given below are a list of parameters that the page markup is evaluated on and th
 - [x] make sure the H1 tag shows up in the document before H2, H3 
 - [x] Image missing 'alt' attribute
 
-### Info
+* ### Info
 - [ ] Chrome on Android and Safari on iOS home screen icons
 - [ ] Favicon
 - [x] meta tags are in the right order: title, description, keywords
@@ -47,8 +47,13 @@ Given below are a list of parameters that the page markup is evaluated on and th
 
 ______________________
 
-### Features
+## Features
 
 - Lambda syntax
 - Scope and closures
 - Santizer/Analyzer resuables libraries using Singleton pattern (using TypeScript)
+
+______________________
+
+[![SEO Hero Chrome Extension](https://raw.githubusercontent.com/srvikram13/SEO-Hero/master/doc/promo-tile-preview.png)](https://chrome.google.com/webstore/detail/seo-hero-in-page-seo-anal/clahmkfhfajdkfingpeedjfmnbfnbblp)
+
