@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"max",
+				"max-width"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"new",
+				"newUrl"
+			],
+			[
+				"curr",
+				"currentTabUrl"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"title",
+				"titleFound"
+			],
+			[
+				"temp",
+				"tempDom"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"ini",
+				"inline-block"
+			],
+			[
 				"HTMLI",
 				"HTMLImageElement\tinterface"
 			],
@@ -22,10 +62,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"margin",
-				"margin-bottom"
 			],
 			[
 				"error",
@@ -128,10 +164,6 @@
 				"page-title"
 			],
 			[
-				"padding",
-				"padding"
-			],
-			[
 				"TE",
 				"text-align"
 			],
@@ -154,10 +186,6 @@
 			[
 				"inlin",
 				"inline-flex"
-			],
-			[
-				"max",
-				"max-height"
 			],
 			[
 				"stx",
@@ -206,10 +234,6 @@
 			[
 				"pro",
 				"prototype"
-			],
-			[
-				"new",
-				"newStudent"
 			],
 			[
 				"pr",
@@ -335,13 +359,6 @@
 	},
 	"buffers":
 	[
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
@@ -460,6 +477,17 @@
 	],
 	"file_history":
 	[
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/popup.css",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/popup.html",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/popup.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/LinkChecker.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.js",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.ts",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/manifest.json",
+		"/C/Users/vikram/Downloads/sitemap.xml",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/analysis.json",
+		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/jmp.byco",
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/if.scm",
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/if.byco",
@@ -474,7 +502,6 @@
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/Instructions.txt",
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/stor_load.byco",
 		"/C/Users/vikram/Documents/Coursework/CS252/HWX/test.byco",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/README.md",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/alicePriv.txt",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/bobPriv.txt",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/bobPub.txt",
@@ -487,15 +514,7 @@
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/tester.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/tester.output.txt",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW4- Spring '16/alicePub.txt",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/analysis.json",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/styles/popup.css",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/popup.html",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/popup.js",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.js",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLAnalyzer.ts",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/biblio.bib",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/manifest.json",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/HTMLSanitizer.ts",
 		"/C/Users/vikram/Documents/playground/srvikram13/index.html",
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/doc/report.tex",
@@ -503,7 +522,6 @@
 		"/C/Users/vikram/Documents/Coursework/CS252/Project/biblio.bib",
 		"/C/Users/vikram/Documents/Coursework/CS252/HW3/WhileInterp.hs",
 		"/C/Users/vikram/Documents/Coursework/CS252/Presentation-Summaries-1.txt",
-		"/C/Users/vikram/Documents/Coursework/CS252/Project/SEO-Hero/src/scripts/LinkChecker.js",
 		"/C/Users/vikram/Documents/Coursework/CS252/Presentation-Summaries-2.txt",
 		"/C/Users/vikram/Documents/playground/srvikram13/LinkChecker.UI.js",
 		"/C/Users/vikram/Documents/playground/srvikram13/LinkChecker.js",
@@ -586,12 +604,11 @@
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-DisneyEmergingTech.txt",
 		"/C/Users/vikram/Documents/Application Material/Cover Letters (Specific)/Intern-Autodesk-BigDataDev1.txt",
 		"/C/Users/vikram/Documents/Coursework/CS185C-03/CS185C-03 Solving Big Data Problems",
-		"/C/Users/vikram/Documents/Coursework/CS235/CS235 User Interface Design",
-		"/C/Users/vikram/Documents/Coursework/CS251B/CS251B Object Oriented Design"
+		"/C/Users/vikram/Documents/Coursework/CS235/CS235 User Interface Design"
 	],
 	"find":
 	{
-		"height": 67.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -606,6 +623,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console.log",
+			"searc",
+			"loadPage",
+			"option",
+			"#title",
+			"styles",
+			"images",
+			"console.log",
+			"getSavedBackgroundColor",
+			"color",
+			"H1",
+			"!imp",
+			"h1",
+			"link-info",
 			"extractLinks",
 			"console.log",
 			"$(\"#page-errors\").append",
@@ -711,42 +742,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 48.0
+		"height": 42.0
 	},
 	"input":
 	{
@@ -795,7 +798,7 @@
 	"project": "SEO-here.sublime-project",
 	"replace":
 	{
-		"height": 90.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -805,24 +808,40 @@
 		"selected_items":
 		[
 			[
+				"mai",
+				"src\\manifest.json"
+			],
+			[
 				"htmla",
 				"src\\scripts\\HTMLAnalyzer.ts"
 			],
 			[
-				"pop",
-				"src\\styles\\popup.css"
+				"htmls",
+				"src\\scripts\\HTMLSanitizer.js"
+			],
+			[
+				"anal",
+				"src\\analysis.json"
+			],
+			[
+				"html",
+				"src\\scripts\\HTMLAnalyzer.ts"
+			],
+			[
+				"htmlsa",
+				"src\\scripts\\HTMLSanitizer.js"
+			],
+			[
+				"read",
+				"README.md"
 			],
 			[
 				"link",
 				"src\\scripts\\LinkChecker.js"
 			],
 			[
-				"htmlsa",
-				"src\\scripts\\HTMLSanitizer.ts"
-			],
-			[
-				"html",
-				"src\\scripts\\HTMLSanitizer.ts"
+				"pop",
+				"src\\scripts\\popup.js"
 			],
 			[
 				"popup",
